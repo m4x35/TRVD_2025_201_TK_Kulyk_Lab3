@@ -1,0 +1,12 @@
+<h1>Список відео</h1>
+<ul>
+    {{#videos}}
+    <li><strong>{{title}}</strong>: {{description}} ({{url}})</li>
+    {{/videos}}
+</ul>
+<form action="/videos" method="POST">
+    <input type="text" name="title" placeholder="Назва">
+    <input type="text" name="description" placeholder="Опис">
+    <input type="text" name="url" placeholder="Посилання">
+    <button type="submit">Додати відео</button>
+</form>
